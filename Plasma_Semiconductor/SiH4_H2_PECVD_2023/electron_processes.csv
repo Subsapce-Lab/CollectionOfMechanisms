@@ -1,0 +1,20 @@
+source_reaction,equation,rate_data
+R1,SiH4 + e => SiH3 + H + e,EEDF-derived; article gives no numeric rate coefficient
+R2,SiH4 + e => SiH2 + 2 H + e,EEDF-derived; article gives no numeric rate coefficient
+R3,SiH4 + e => SiH + H2 + H + e,EEDF-derived; article gives no numeric rate coefficient
+R4,SiH4 + e => Si + 2 H2 + e,EEDF-derived; article gives no numeric rate coefficient
+R5,SiH4 + e => SiH3+ + H + 2 e,EEDF-derived; article gives no numeric rate coefficient
+R6,SiH4 + e => SiH2+ + 2 H + 2 e,EEDF-derived; article gives no numeric rate coefficient
+R7,SiH4 + e => SiH3- + H,EEDF-derived; article gives no numeric rate coefficient
+R8,SiH3 + e => SiH2 + H + e,EEDF-derived; article gives no numeric rate coefficient
+R9,SiH3 + e => SiH3+ + 2 e,EEDF-derived; article gives no numeric rate coefficient
+R10,Si2H6 + e => SiH4 + SiH2 + e,EEDF-derived; article gives no numeric rate coefficient
+R11,Si2H6 + e => Si2H4 + 2 H + e,EEDF-derived; article gives no numeric rate coefficient
+R12,Si2H6 + e => SiH3+ + SiH3 + 2 e,EEDF-derived; article gives no numeric rate coefficient
+R13,H2 + e => H2+ + 2 e,EEDF-derived; article gives no numeric rate coefficient
+R14,H2 + e => H+ + H + 2 e,EEDF-derived; article gives no numeric rate coefficient
+R15,H2 + e => 2 H + e,EEDF-derived; article gives no numeric rate coefficient
+R16,H + e => H+ + 2 e,EEDF-derived; article gives no numeric rate coefficient
+R17,H2+ + e => H+ + H + e,EEDF-derived; article gives no numeric rate coefficient
+R18,H2+ + e => 2 H,EEDF-derived; article gives no numeric rate coefficient
+R19,H3+ + e => H2 + H,EEDF-derived; article gives no numeric rate coefficient

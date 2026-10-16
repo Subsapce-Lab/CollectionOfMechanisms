@@ -1,0 +1,118 @@
+description: "Ar/O2 atmospheric DBD and post-discharge gas-phase subset; source Table 2"
+units: {length: cm, quantity: mol, activation-energy: cal/mol}
+phases:
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  elements: [Ar, O]
+  species: all
+  reactions: all
+  state: {T: 293 K, P: 1 atm}
+species:
+- name: "Ar"
+  composition: {Ar: 1}
+- name: "Ar*"
+  composition: {Ar: 1}
+- name: "O"
+  composition: {O: 1}
+- name: "O*"
+  composition: {O: 1}
+- name: "O1D"
+  composition: {O: 1}
+- name: "O2"
+  composition: {O: 2}
+- name: "O2a"
+  composition: {O: 2}
+- name: "O2b"
+  composition: {O: 2}
+- name: "O3"
+  composition: {O: 3}
+reactions:
+- equation: "Ar* => Ar"
+  type: elementary
+  rate-constant: {A: 240000, b: 0, Ea: 0}
+- equation: "Ar* + O => Ar + O*"
+  type: elementary
+  rate-constant: {A: 4.576826978e+13, b: 0, Ea: 0}
+- equation: "Ar* + O2 => Ar + 2 O"
+  type: elementary
+  rate-constant: {A: 5.94385293e+13, b: 0, Ea: 0}
+- equation: "Ar* + O2 => Ar + O + O1D"
+  type: elementary
+  rate-constant: {A: 6.702642666e+13, b: 0, Ea: 0}
+- equation: "Ar* + O2a => Ar + 2 O"
+  type: elementary
+  rate-constant: {A: 5.94385293e+13, b: 0, Ea: 0}
+- equation: "Ar* + O2a => Ar + O + O1D"
+  type: elementary
+  rate-constant: {A: 6.702642666e+13, b: 0, Ea: 0}
+- equation: "Ar* + O2b => Ar + 2 O"
+  type: elementary
+  rate-constant: {A: 5.94385293e+13, b: 0, Ea: 0}
+- equation: "Ar* + O2b => Ar + O + O1D"
+  type: elementary
+  rate-constant: {A: 6.702642666e+13, b: 0, Ea: 0}
+- equation: "Ar* + O3 => Ar + O1D + O2"
+  type: elementary
+  rate-constant: {A: 1.26464956e+14, b: 0, Ea: 0}
+- equation: "O + O2 + M => O3 + M"
+  type: three-body
+  rate-constant: {A: 3.883015231e+27, b: -2.7, Ea: 0}
+  default-efficiency: 0.0
+  efficiencies: {Ar: 1.0}
+  default-efficiency: 0.0
+  efficiencies: {Ar: 1.0}
+- equation: "O + O3 => 2 O2"
+  type: elementary
+  rate-constant: {A: 4.817712608e+12, b: 0, Ea: 4093.640773}
+- equation: "O3 + Ar => O2 + O + Ar"
+  type: elementary
+  rate-constant: {A: 2.469077712e+14, b: 0, Ea: 22654.12855}
+- equation: "O1D + Ar => O + Ar"
+  type: elementary
+  rate-constant: {A: 3.01107038e+12, b: 0, Ea: 0}
+- equation: "O1D + O2 => O2a + O"
+  type: elementary
+  rate-constant: {A: 6.02214076e+11, b: 0, Ea: 0}
+- equation: "O1D + O2 => O2b + O"
+  type: elementary
+  rate-constant: {A: 1.541668035e+13, b: 0, Ea: -133.1426853}
+- equation: "O1D + O3 => 2 O2"
+  type: elementary
+  rate-constant: {A: 1.445313782e+14, b: 0, Ea: 0}
+- equation: "O1D + O3 => O2 + 2 O"
+  type: elementary
+  rate-constant: {A: 7.226568912e+13, b: 0, Ea: 0}
+- equation: "O1D + O3 => O2 + O2a"
+  type: elementary
+  rate-constant: {A: 7.226568912e+13, b: 0, Ea: 0}
+- equation: "O2a + Ar => O2 + Ar"
+  type: elementary
+  rate-constant: {A: 5419.926684, b: 0, Ea: 0}
+- equation: "O2a + O => O2 + O"
+  type: elementary
+  rate-constant: {A: 120442815.2, b: 0, Ea: 0}
+- equation: "O2a + O2 => 2 O2"
+  type: elementary
+  rate-constant: {A: 1806642.228, b: 0, Ea: 397.4408517}
+- equation: "O2a + O3 => 2 O2 + O"
+  type: elementary
+  rate-constant: {A: 3.131513195e+13, b: 0, Ea: 5643.660095}
+- equation: "O2b + Ar => O2 + Ar"
+  type: elementary
+  rate-constant: {A: 60221407.6, b: 0, Ea: 0}
+- equation: "O2b + O3 => 2 O2 + O"
+  type: elementary
+  rate-constant: {A: 9.03321114e+12, b: 0, Ea: 0}
+- equation: "O2a => O2"
+  type: elementary
+  rate-constant: {A: 0.00037, b: 0, Ea: 0}
+- equation: "O2b => O2"
+  type: elementary
+  rate-constant: {A: 0.14, b: 0, Ea: 0}
+- equation: "O* + Ar => O + Ar"
+  type: elementary
+  rate-constant: {A: 8.430997064e+12, b: 0, Ea: 0}
+- equation: "O* => O"
+  type: elementary
+  rate-constant: {A: 29000000, b: 0, Ea: 0}

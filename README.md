@@ -1,6 +1,6 @@
 # CollectionOfMechanisms
 
-This repo is a collection of combustion reaction mechanisms.
+This repo is a collection of chemical reaction mechanisms, including combustion and plasma chemistry.
 This repo also tries to include a converted Cantera `YAML` format mechanism to
 allow Cantera users to avoid the effort of repeatedly converting mechanisms.
 
@@ -42,3 +42,7 @@ Other collections:
 
 * [Converting Chemkin-format files](https://cantera.org/tutorials/ck2yaml-tutorial.html)
 * [fitData_Cantera: fit thermo file to a uniform common T](https://github.com/ZhangYanTJU/fitData_Cantera)
+
+## Semiconductor plasma mechanisms
+
+A small, source-attributed collection of redistributable PECVD and plasma-chemistry kinetics, with Cantera YAML and provenance notes, is available in [Plasma_Semiconductor](Plasma_Semiconductor/README.md).
