@@ -33,9 +33,8 @@ for name, (heavy_rows, electron_rows, active_reactions) in expected.items():
     heavy_count = sum(1 for _ in csv.DictReader(heavy.open(newline="")))
     if heavy_count != heavy_rows:
         raise AssertionError(f"{name}: expected {heavy_rows} source heavy reactions, got {heavy_count}")
-    e_count = 0
     if electron_rows is not None:
         e_count = sum(1 for _ in csv.DictReader((folder / "electron_processes.csv").open(newline="")))
         if e_count != electron_rows:
             raise AssertionError(f"{name}: expected {electron_rows} electron reactions, got {e_count}")
-    print(f"{name}: {gas.n_species} species, {gas.n_reactions} YAML reactions; {heavy_count} source heavy rows; {e_count} electron rows; balanced")
+    print(f"{name}: {gas.n_species} species, {gas.n_reactions} YAML reactions; {heavy_count} source reaction rows; balanced")
