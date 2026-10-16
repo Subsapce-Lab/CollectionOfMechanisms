@@ -1,0 +1,112 @@
+description: "Thermal heavy-particle subset; Sushkov et al. 2023 Tables 1 and 3"
+units: {length: cm, quantity: mol, activation-energy: cal/mol}
+phases:
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  elements: [Si, H]
+  species: all
+  reactions: all
+  state: {T: 300 K, P: 1 atm}
+species:
+- name: "H2"
+  composition: {H: 2}
+- name: "H"
+  composition: {H: 1}
+- name: "SiH4"
+  composition: {Si: 1, H: 4}
+- name: "SiH3"
+  composition: {Si: 1, H: 3}
+- name: "SiH2"
+  composition: {Si: 1, H: 2}
+- name: "SiH"
+  composition: {Si: 1, H: 1}
+- name: "Si"
+  composition: {Si: 1}
+- name: "Si2H2"
+  composition: {Si: 2, H: 2}
+- name: "Si2H3"
+  composition: {Si: 2, H: 3}
+- name: "Si2H4"
+  composition: {Si: 2, H: 4}
+- name: "Si2H5"
+  composition: {Si: 2, H: 5}
+- name: "Si2H6"
+  composition: {Si: 2, H: 6}
+- name: "Si3H5"
+  composition: {Si: 3, H: 5}
+- name: "Si3H7"
+  composition: {Si: 3, H: 7}
+- name: "Si3H8"
+  composition: {Si: 3, H: 8}
+- name: "H+"
+  composition: {H: 1}
+  charge: 1
+- name: "H2+"
+  composition: {H: 2}
+  charge: 1
+- name: "H3+"
+  composition: {H: 3}
+  charge: 1
+- name: "SiH3+"
+  composition: {Si: 1, H: 3}
+  charge: 1
+- name: "SiH2+"
+  composition: {Si: 1, H: 2}
+  charge: 1
+- name: "SiH3-"
+  composition: {Si: 1, H: 3}
+  charge: -1
+reactions:
+- equation: "SiH4 + H => SiH3 + H2"
+  rate-constant: {A: 8.250332841e+13, b: 0, Ea: 3616.711751}
+- equation: "SiH3 + H => SiH2 + H2"
+  rate-constant: {A: 3.779208753e+14, b: -0.05, Ea: 153.0147279}
+- equation: "SiH2 + H => SiH + H2"
+  rate-constant: {A: 2.001782957e+14, b: 0.07, Ea: 455.0697752}
+- equation: "SiH + H => Si + H2"
+  rate-constant: {A: 8.285977694e+15, b: -0.32, Ea: 594.1740733}
+- equation: "SiH2 + SiH4 => Si2H4 + H2"
+  rate-constant: {A: 3.101402491e+12, b: 0, Ea: 417.3128943}
+- equation: "Si2H3 + SiH4 => Si3H7"
+  rate-constant: {A: 1.204428152e+14, b: 0, Ea: 0}
+- equation: "Si2H4 + SiH3 => Si3H7"
+  rate-constant: {A: 1.204428152e+12, b: 0, Ea: 0}
+- equation: "Si2H4 + H => Si2H5"
+  rate-constant: {A: 3.01107038e+12, b: 0, Ea: 0}
+- equation: "SiH2 + Si2H6 => Si2H4 + SiH4"
+  rate-constant: {A: 1.586216362e+25, b: -2, Ea: 2998.691226}
+- equation: "SiH2 + Si2H6 => Si3H8"
+  rate-constant: {A: 1.662809219e+69, b: -10.2, Ea: 5097.178923}
+- equation: "2 SiH3 => SiH4 + SiH2"
+  rate-constant: {A: 4.968266127e+13, b: 0, Ea: 0}
+- equation: "2 SiH3 => Si2H4 + H2"
+  rate-constant: {A: 1.204428152e+13, b: 0, Ea: 0}
+- equation: "Si2H6 + H => Si2H5 + H2"
+  rate-constant: {A: 857.5712088, b: 1.8, Ea: 19.87204259}
+- equation: "Si2H6 + H => SiH3 + SiH4"
+  rate-constant: {A: 12379.63325, b: 1.6, Ea: 1251.938683}
+- equation: "Si2H6 + SiH3 => Si2H5 + SiH4"
+  rate-constant: {A: 2.408856304e+14, b: 0, Ea: 4968.010647}
+- equation: "Si + SiH4 => Si2H2 + H2"
+  rate-constant: {A: 2.107749266e+14, b: 0, Ea: 0}
+- equation: "H2 + H => 3 H"
+  rate-constant: {A: 2.497470178e+22, b: -1, Ea: 109296.2342}
+- equation: "SiH3- + H3+ => SiH4 + H2"
+  rate-constant: {A: 7.226568912e+13, b: 0, Ea: 0}
+- equation: "SiH3- + SiH2+ => SiH3 + SiH2"
+  rate-constant: {A: 7.828782988e+13, b: 0, Ea: 0}
+- equation: "SiH3- + SiH3+ => 2 SiH3"
+  rate-constant: {A: 7.226568912e+13, b: 0, Ea: 0}
+- equation: "SiH4 + H2+ => SiH2+ + 2 H2"
+  rate-constant: {A: 1.204428152e+14, b: 0, Ea: 0}
+- equation: "SiH4 + H2+ => SiH3+ + H2 + H"
+  rate-constant: {A: 3.745771553e+14, b: 0, Ea: 0}
+- equation: "SiH4 + H3+ => SiH3+ + 2 H2"
+  rate-constant: {A: 3.107424632e+14, b: 0, Ea: 0}
+- equation: "H2 + H2+ => H2 + H+ + H"
+  rate-constant: {A: 6.02214076e+15, b: 0, Ea: 167123.8782}
+- equation: "H2 + H2+ => H3+ + H"
+  rate-constant: {A: 1.939129325e+14, b: 0, Ea: 43432.33628}
+- equation: "H2 + H+ => H2+ + H"
+  rate-constant: {A: 1.26464956e+15, b: 0, Ea: 0}
