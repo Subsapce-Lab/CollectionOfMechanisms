@@ -1,11 +1,12 @@
 # Semiconductor plasma chemistry
 
-Curated, source-attributed gas-phase data for semiconductor process plasmas. The Cantera files are **kinetics-only** transcriptions with ideal-gas phases and species compositions; they intentionally omit thermodynamic property fits, energy distributions, reactor/source terms, and surface boundary models. Do not treat them as validated process models.
+Curated, source-attributed gas-phase and surface data for semiconductor processes. The two gas-phase Cantera files are **kinetics-only** transcriptions with ideal-gas phases and species compositions; they omit thermodynamic property fits, energy distributions, reactor/source terms, and surface boundary models. The separate GPL-licensed ViennaChem files provide surface submodels, not Cantera mechanisms.
 
 | Set | Scope | Cantera species/reactions | Other source data |
 |---|---|---:|---|
 | [Ar/O2 atmospheric DBD](ArO2_DBD_atmospheric/README.md) | Ar with ≤1% O2, atmospheric DBD and post-discharge; thermal/excited-state gas chemistry | 9 / 28 | 31-row source reaction inventory, including excluded source and wall terms |
 | [SiH4/H2 PECVD](SiH4_H2_PECVD_2023/README.md) | 0.1–1.5 Torr, 300–700 K, gas-phase silane/hydrogen chemistry | 21 / 26 | 29 heavy reaction rows; 19 electron-impact equations (rates unavailable in article) |
+| [Silane LPCVD, GaAs MOVPE, SF6/O2 silicon etch](ViennaChem_GPL/README.md) | Surface submodels for semiconductor deposition and plasma etching | ViennaChem native format | 3 GPL-licensed source mechanisms; see local license and native-loader test |
 
 ## Source pointers (not redistributed)
 
@@ -17,7 +18,16 @@ Curated, source-attributed gas-phase data for semiconductor process plasmas. The
 | Quantemol-DB. | Commercial database; no data copied. |
 | Published SiH4/NH3/N2, TEOS/O2, CF4/O2, Cl2/Ar, and surface-reaction datasets. | Candidate literature was not included absent an explicit redistribution basis and complete, reusable numerical data. |
 
-## Loader check
+## Loader checks
+
+Run the ViennaChem-native test with ViennaChem installed at the pinned upstream commit (it needs SymPy and PyYAML):
+
+```sh
+python3 test_viennachem_mechanisms.py
+```
+
+This checks native compilation and element balance for each surface reaction. These three files are not Cantera YAML.
+
 
 Run from this directory with Cantera installed:
 
